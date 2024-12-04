@@ -1,36 +1,39 @@
-#ifdef  ARTICLE_H
+#ifndef ARTICLE_H
 #define ARTICLE_H
 #include <iostream>
-#include <stream>
+#include <string>
 #include "author.cpp"
+
+using namespace std;
 
 class Article{
 private:
-   std:: string title;
-   Author author;
-   int publicationYear;
-   std::string Journal;
+    string title;
+    Author author;
+    int publicationYear;
+    string journal;
 public:
-Article()
-:title(""), author Author()), publicationYear(0), Journal(""));
-Article(std::string articleTitle, Author articleAuthor, int Year, stdz::string joutrnalName)
-: title(articleTitle), author(articleAuthor), publicationYear(year), Journal(joutrnalName){};
-Article(article &other)
-:title(other,title), author(other,author), publicationYear(other, publicationYear), journal(other,journal){};
- std::string getJournal(){
-    return journal;
- };
- int getPublicationYear(){
-    return publicationYear;
- };
- Author getAuthor(){
-    return author;
- };
- std:: string getTitle(){
-   return title;
+    Article() 
+    : title(""), author(Author()), publicationYear(0), journal(""){}; 
+    Article(string articleTitle, Author articleAuthor, int publicationYear, string journalName ) 
+    : title(articleTitle), author(articleAuthor), publicationYear(publicationYear), journal(journalName) {};
+    Article(Article &other) 
+    : title(other.title), author(other.author), publicationYear(other.publicationYear), journal(other.journal){};
+    void displayInfo(){
+        cout << "L aura mostek L aura";
+    };
+    string getTitle(){
+        return title;
+    };
+    Author getAuthor(){
+        return author;
+    };
+    int getPublicationYear(){
+        return publicationYear;
+    };
+    string getJournal(){
+        return journal;
+    };
 };
-void displayInfo(){
-    coutr
-}
 
-};
+#endif
