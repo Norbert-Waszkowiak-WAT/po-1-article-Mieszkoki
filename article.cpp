@@ -20,7 +20,7 @@ public:
     Article(Article &other) 
     : title(other.title), author(other.author), publicationYear(other.publicationYear), journal(other.journal){};
     void displayInfo(){
-        cout << "L aura mostek L aura";
+        cout << "sigma sigma";
     };
     string getTitle(){
         return title;
